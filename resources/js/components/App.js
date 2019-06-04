@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navigation from "./Navigation";
 import LandingPage from "./LandingPage";
+import Footer from "./Footer";
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={LandingPage} />
                     </Switch>
+                    <Footer />
                 </div>
             </BrowserRouter>
         );
