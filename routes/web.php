@@ -10,7 +10,4 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('layout.master');
-});
+Route::view('/{path?}', 'layout.master', ['app_name' => env('APP_NAME') ]);
