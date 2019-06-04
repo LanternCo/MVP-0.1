@@ -5,7 +5,7 @@ const Navigation = props => (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div className="container">
             {/* @TODO - get app name from props */}
-            <a className="navbar-brand" href="{{ url('/') }}">
+            <a className="navbar-brand" href="/">
                 {props.appName}
             </a>
             <button

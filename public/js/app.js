@@ -67534,7 +67534,7 @@ var Navigation = function Navigation(props) {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "navbar-brand",
-    href: "{{ url('/') }}"
+    href: "/"
   }, props.appName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "navbar-toggler",
     type: "button",
