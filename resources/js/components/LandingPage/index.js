@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Heading from "../Heading";
 
 class LandingPage extends Component {
     constructor(props) {
@@ -7,92 +8,61 @@ class LandingPage extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
-                <div className="container p-5 border-bottom">
-                    <p className="text-center font-weight-light mb-4 lead">
-                        Dealing with a Death is Hard
-                    </p>
-                    <p className="text-center font-weight-light mb-4">
-                        We’re Here to Make the Planning a Little Easier
-                    </p>
-                </div>
-                <div className="container p-5 border-bottom">
-                    <h2 className="text-center font-weight-light mb-4">
-                        How It Works:
-                    </h2>
-                    <div className="steps">
+            <div>
+                <Heading />
+                <div className="container-fluid border-bottom bg-light-gray">
+                    <div className="container">
                         <div className="row no-gutters py-4">
                             <div className="col">
-                                <h2>1. Answer a few Short Questions</h2>
+                                <img
+                                    src="https://images.squarespace-cdn.com/content/v1/5ba2aefab27e39a66cabcaf3/1558539984898-2RVCPT5BJ5PHATVX2JEW/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/christin-hume-505823-unsplash.jpg?format=1500w"
+                                    className="rounded mx-auto d-block"
+                                    alt="..."
+                                    width="500"
+                                />
+                            </div>
+                            <div className="col">
+                                <h1 className="text-center font-weight-bold mb-4">
+                                    How It Works:
+                                </h1>
+                                <ol>
+                                    <li class="lead">
+                                        <p>
+                                            Have a real conversation with a real
+                                            person. Just click the chat button
+                                            below.
+                                        </p>
+                                    </li>
+                                    <li class="lead">
+                                        <p>
+                                            We’ll ask you a couple of basic
+                                            questions to figure out where you
+                                            are in the process. It’ll take about
+                                            5 minutes.
+                                        </p>
+                                    </li>
+                                    <li class="lead">
+                                        <p>
+                                            Using the information you provide,
+                                            we’ll immediately create a
+                                            customized checklist to guide you
+                                            through your next steps of planning.{" "}
+                                            <span className="font-italic">
+                                                Hint: it’s also a really great
+                                                tool for answering “how can I
+                                                help?”
+                                            </span>{" "}
+                                        </p>
+                                    </li>
+                                </ol>
+                                {/* <h2>1. Answer a few Short Questions</h2>
                                 <p>
                                     We’ll use this info to tailor your
                                     experience to your needs.
-                                </p>
-                            </div>
-                            <div className="col">
-                                <img
-                                    src="https://via.placeholder.com/500x200"
-                                    className="rounded mx-auto d-block"
-                                    alt="..."
-                                />
-                            </div>
-                        </div>
-                        <div className="row no-gutters py-4">
-                            <div className="col">
-                                <h2>2. Meet Your Dashboard</h2>
-                                <p>
-                                    Based on your responses, we’ll instantly
-                                    create a comprehensive checklist that’ll
-                                    serve as your roadmap forward.
-                                </p>
-                            </div>
-                            <div className="col">
-                                <img
-                                    src="https://via.placeholder.com/500x200"
-                                    className="rounded mx-auto d-block"
-                                    alt="..."
-                                />
-                            </div>
-                        </div>
-                        <div className="row no-gutters py-4">
-                            <div className="col">
-                                <h2>3. Start Checking Things Off</h2>
-                                <p>
-                                    Take your tasks day by day. We’ll keep you
-                                    on track, share useful resources, and assist
-                                    in decision making.
-                                </p>
-                            </div>
-                            <div className="col">
-                                <img
-                                    src="https://via.placeholder.com/500x200"
-                                    className="rounded mx-auto d-block"
-                                    alt="..."
-                                />
+                                </p> */}
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="container p-5">
-                    <h2 className="text-left font-weight-light mb-4">
-                        About Us
-                    </h2>
-                    <p className="text-left font-weight-light mb-4">
-                        We’ve been there. Our team started in your shoes having
-                        lost parents and grandparents, and having been totally
-                        overwhelmed by all of the work that came with it. We
-                        quickly realized it’s really hard to navigate not only
-                        the first few days but also the weeks and months
-                        following a loss. So, we made it our mission to ensure
-                        every grieving person has a simple, trustworthy, and
-                        comprehensive place to turn. We’ve sifted through the
-                        hundreds of websites, funeral services, and books so you
-                        don’t have to and we’ve got some of the most
-                        knowledgeable people in the game advising us. Think of
-                        us as part knowledgeable friend who’s been there before
-                        and part assistant to help you wade through the tough
-                        stuff.
-                    </p>
                 </div>
             </div>
         );

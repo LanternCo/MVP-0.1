@@ -1,22 +1,26 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Navigation from './Navigation'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navigation from "./Navigation";
+import LandingPage from "./LandingPage";
 
 class App extends Component {
-  render () {
-    return (
-      <BrowserRouter>
-        <div>
-          <Navigation appName={this.props.name}/>
-        </div>
-      </BrowserRouter>
-    )
-  }
+    render() {
+        return (
+            <BrowserRouter>
+                <div>
+                    <Navigation appName={this.props.name} />
+                    <Switch>
+                        <Route exact path="/" component={LandingPage} />
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        );
+    }
 }
 
-if (document.getElementById('app')) {
-    const appElement = document.getElementById('app');
-    const appName = appElement.getAttribute('data-app-name')
-    ReactDOM.render(<App name={appName} />, appElement)
+if (document.getElementById("app")) {
+    const appElement = document.getElementById("app");
+    const appName = appElement.getAttribute("data-app-name");
+    ReactDOM.render(<App name={appName} />, appElement);
 }
