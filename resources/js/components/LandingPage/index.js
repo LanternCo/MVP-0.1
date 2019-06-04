@@ -84,7 +84,7 @@ class LandingPage extends Component {
                                     Enter your email address below to stay in
                                     the loop on content and updates.
                                 </p>
-                                <div class="mailchimp-form">
+                                <div className="mailchimp-form">
                                     <MailchimpSubscribe
                                         url={
                                             "https://goodgrief.us19.list-manage.com/subscribe/post?u=07235aa8ad2f334b610249099&amp;id=bd3ad2cd01"

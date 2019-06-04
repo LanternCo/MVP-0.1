@@ -67493,7 +67493,7 @@ function (_Component) {
       }, "Not quite ready to chat?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "text-center text-dark"
       }, "Enter your email address below to stay in the loop on content and updates."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        "class": "mailchimp-form"
+        className: "mailchimp-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_mailchimp_subscribe__WEBPACK_IMPORTED_MODULE_2__["default"], {
         url: "https://goodgrief.us19.list-manage.com/subscribe/post?u=07235aa8ad2f334b610249099&amp;id=bd3ad2cd01"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
