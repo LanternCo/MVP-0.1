@@ -1,12 +1,43 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 .bg-light-gray {
     background-color: $gray;
+}
+
+.display-linebreak {
+    white-space: pre-line;
+}
+
+.mailchimp-form {
+    input {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0 4px;
+        border: 1px solid #ccc;
+        background: #fafafa;
+        color: #000;
+        font-family: sans-serif;
+        line-height: normal;
+        box-sizing: border-box;
+        border-radius: 2px;
+    }
+
+    button {
+        background-color: $green;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+    }
 }
