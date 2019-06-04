@@ -10,11 +10,19 @@ class LandingPage extends Component {
     render() {
         return (
             <div>
-                <TextSection
-                    title={
-                        "Dealing with death is hard. \n We’re here to make the planning a little bit easier."
-                    }
-                />
+                <div>
+                    <TextSection
+                        title={
+                            "Dealing with death is hard. \n We’re here to make the planning a little bit easier."
+                        }
+                    />
+                    {/* <a
+                        href="javascript:void(0);"
+                        onClick={olark('api.box.expand')}
+                    >
+                        Click here to chat!
+                    </a> */}
+                </div>
                 {/* How It Works */}
                 <div className="container-fluid border-bottom bg-light-gray">
                     <div className="container">
