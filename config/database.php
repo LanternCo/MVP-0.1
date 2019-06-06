@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 if (env('APP_ENV') !== 'local') {
-    $url = getenv('JAWSDB_URL');
+    $url = env('JAWSDB_MARIA_URL');
     $dbparts = parse_url($url);
 
     $hostname = $dbparts['host'];
