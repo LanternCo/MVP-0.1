@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation snapshot 1`] = `
+<nav
+  className="navbar navbar-expand-md navbar-light bg-white shadow-sm"
+>
+  <div
+    className="container"
+  >
+    <a
+      className="navbar-brand"
+      href="/"
+    >
+      Test
+    </a>
+    <button
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="{{ __('Toggle navigation') }}"
+      className="navbar-toggler"
+      data-target="#navbarSupportedContent"
+      data-toggle="collapse"
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="collapse navbar-collapse"
+      id="navbarSupportedContent"
+    >
+      <ul
+        className="navbar-nav ml-auto"
+      />
+    </div>
+  </div>
+</nav>
+`;
