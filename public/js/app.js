@@ -67525,7 +67525,10 @@ function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
- // import { Link } from "react-router-dom";
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
 
 var Navigation = function Navigation(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
@@ -67553,6 +67556,12 @@ var Navigation = function Navigation(props) {
   }))));
 };
 
+Navigation.propTypes = {
+  appName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+Navigation.defaultProps = {
+  appName: 'Lantern'
+};
 /* harmony default export */ __webpack_exports__["default"] = (Navigation);
 
 /***/ }),

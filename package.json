@@ -27,6 +27,7 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "prop-types": "^15.7.2",
         "react-mailchimp-subscribe": "^2.1.0"
     }
 }

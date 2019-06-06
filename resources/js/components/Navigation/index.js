@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Navigation = props => (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -62,5 +62,13 @@ const Navigation = props => (
         </div>
     </nav>
 );
+
+Navigation.propTypes = {
+    appName: PropTypes.string
+};
+
+Navigation.defaultProps = {
+    appName: 'Lantern',
+};
 
 export default Navigation;
