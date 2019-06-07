@@ -13,7 +13,7 @@
         {{-- <link href="https://fonts.googleapis.com/css?family=Muli:700&display=swap" rel="stylesheet"> --}}
 
         <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
 
         {{-- Begin Intercom widget --}}
         <script>
@@ -35,6 +35,6 @@
                     </div>
                 </div> --}}
         <div id="app" data-app-name={{$app_name}}></div>
-        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ secure_asset('js/app.js') }}"></script>
     </body>
 </html>
