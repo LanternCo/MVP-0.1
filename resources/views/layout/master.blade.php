@@ -8,7 +8,8 @@
         <title>Lantern</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap" rel="stylesheet">
+        {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
         {{-- <link href="https://fonts.googleapis.com/css?family=Muli:700&display=swap" rel="stylesheet"> --}}
 
         <!-- Styles -->
