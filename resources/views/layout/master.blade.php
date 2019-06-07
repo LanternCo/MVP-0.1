@@ -13,20 +13,17 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<!-- begin olark code -->
-<script type="text/javascript" async>
-    ;(function(o,l,a,r,k,y){if(o.olark)return;
-    r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0];
-    y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r);
-    y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)};
-    y.extend=function(i,j){y("extend",i,j)};
-    y.identify=function(i){y("identify",k.i=i)};
-    y.configure=function(i,j){y("configure",i,j);k.c[i]=j};
-    k=y._={s:[],t:[+new Date],c:{},l:a};
-    })(window,document,"static.olark.com/jsclient/loader.js");
-    /* Add configuration calls below this comment */
-    olark.identify('5057-960-10-5136');</script>
- <!-- end olark code -->
+
+        {{-- Begin Intercom widget --}}
+        <script>
+            var APP_ID = "rec43wqu";
+
+            window.intercomSettings = {
+                app_id: APP_ID
+            };
+        </script>
+        <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+        {{-- End Intercom widget --}}
     </head>
     <body>
             {{-- <div id="olark_tab">
