@@ -1,13 +1,29 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
+import { signInAction } from "../../../actions";
+import { connect } from "react-redux";
 
 class LoginPage extends Component {
+    constructor(props) {
+        super(props);
+
+        this.submit = this.submit.bind(this);
+        this.errorMessage = this.errorMessage.bind(this);
+    }
+
     submit(values) {
-        console.log(values);
-    };
+        this.props.signInAction(values, this.props.history);
+    }
+
+    errorMessage() {
+        if (this.props.errorMessage) {
+            return <div className="info-red">{this.props.errorMessage}</div>;
+        }
+    }
 
     render() {
         const { handleSubmit } = this.props;
+
         return (
             <div className="form">
                 <div className="container">
@@ -29,12 +45,22 @@ class LoginPage extends Component {
                             Sign In
                         </button>
                     </form>
+                    {this.errorMessage()}
                 </div>
             </div>
         );
     }
 }
 
-export default reduxForm({
+function mapStateToProps(state) {
+    return { errorMessage: state.auth.error };
+}
+
+const reduxFormSignin = reduxForm({
     form: "signin"
 })(LoginPage);
+
+export default connect(
+    mapStateToProps,
+    { signInAction }
+)(reduxFormSignin);
