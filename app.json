@@ -1,0 +1,13 @@
+{
+    "name": "MVP [name]",
+    "description": "MVP Review APP [Description]",
+    "keywords": [
+      "productivity"
+    ],
+    "website": "https://mvp-production.herokuapp.com/",
+    "repository": "https://github.com/LanternCo/MVP",
+    "success_url": "/",
+    "scripts": {
+      "postdeploy": "php artisan migrate:reset"
+    }
+  }
