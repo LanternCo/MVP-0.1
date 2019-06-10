@@ -13,7 +13,7 @@ class LandingPage extends Component {
                 <div>
                     <TextSection
                         title={
-                            "Dealing with death is hard. \n We’re here to make the planning a little bit easier."
+                            "[TEST] Dealing with death is hard. \n We’re here to make the planning a little bit easier."
                         }
                     />
                 </div>
