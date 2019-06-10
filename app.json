@@ -15,7 +15,7 @@
     ],
     "env": {
         "APP_NAME": "Lantern",
-        "APP_ENV": "local",
+        "APP_ENV": "staging",
         "APP_KEY": {
             "required": true
         },
