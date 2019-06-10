@@ -6,7 +6,7 @@ export const UNAUTHENTICATED = "unauthenticated_user";
 
 export const AUTHENTICATION_ERROR = "authentication_error";
 
-const URL = "https://mvp.test";
+const URL = window.location.origin;
 
 export function signInAction({ email, password }, history) {
     return async dispatch => {
