@@ -4,7 +4,7 @@
     "scripts": {
         "postdeploy": "php artisan migrate:refresh --seed"
     },
-    "addons": ["jawsdb"],
+    "addons": ["jawsdb-maria"],
     "buildpacks": [
         {
             "url": "heroku/php"
