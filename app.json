@@ -1,11 +1,45 @@
 {
-    "name": "MVP [name]",
-    "description": "MVP Review APP [Description]",
-    "keywords": ["productivity"],
-    "website": "https://mvp-production.herokuapp.com/",
-    "repository": "https://github.com/LanternCo/MVP",
-    "success_url": "/",
+    "name": "MVP",
+    "description": ":sparkles:",
     "scripts": {
-        "postdeploy": "php artisan migrate:reset"
+        "postdeploy": "php artisan migrate:refresh --seed"
+    },
+    "addons": ["jawsdb"],
+    "buildpacks": [
+        {
+            "url": "heroku/php"
+        },
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "env": {
+        "APP_NAME": "Lantern",
+        "APP_ENV": "local",
+        "APP_KEY": {
+            "required": true
+        },
+        "APP_DEBUG": "true",
+        "APP_LOG": "errorlog",
+        "APP_URL": "https://mvp-staging.herokuapp.com/",
+        "JAWSDB_MARIA_URL": {
+            "required": true
+        },
+        "LOG_CHANNEL": "errorlog",
+        "TYPEFORM_API_URL": {
+            "required": true
+        },
+        "TYPEFORM_APP_CLIENT_ID": {
+            "required": true
+        },
+        "TYPEFORM_APP_CLIENT_SECRET": {
+            "required": true
+        },
+        "TYPEFORM_FORM_ID": {
+            "required": true
+        },
+        "TYPEFORM_TOKEN": {
+            "required": true
+        }
     }
 }
