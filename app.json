@@ -22,9 +22,6 @@
         "APP_DEBUG": "true",
         "APP_LOG": "errorlog",
         "APP_URL": "https://mvp-staging.herokuapp.com/",
-        "JAWSDB_MARIA_URL": {
-            "required": true
-        },
         "LOG_CHANNEL": "errorlog",
         "TYPEFORM_API_URL": {
             "required": true
