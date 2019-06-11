@@ -27,6 +27,7 @@ export function signInAction({ email, password }, history) {
 }
 
 export function signOutAction() {
+    console.log('signout');
     localStorage.clear();
     return {
         type: UNAUTHENTICATED,

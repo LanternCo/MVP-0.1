@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import SignOut from '../Auth/SignOut';
 
 class Navigation extends Component {
     navbarLinks() {
@@ -10,27 +12,37 @@ class Navigation extends Component {
         if (authenticated) {
             return [
                 <li key="secret" className="nav-item">
-                    <Link to="/secret" className="nav-link">
+                    <NavLink
+                        className="nav-item nav-link"
+                        activeClassName="active"
+                        to="/secret"
+                    >
                         Secret
-                    </Link>
+                    </NavLink>
                 </li>,
                 <li key="signout" className="nav-item">
-                    <Link to="/signout" className="nav-link">
-                        Sign out
-                    </Link>
+                    <SignOut />
                 </li>,
             ];
         }
         return [
             <li key="signin" className="nav-item">
-                <Link to="/signin" className="nav-link">
+                <NavLink
+                    className="nav-item nav-link"
+                    activeClassName="active"
+                    to="/signin"
+                >
                     Sign in
-                </Link>
+                </NavLink>
             </li>,
             <li key="signup" className="nav-item">
-                <Link to="/signup" className="nav-link">
+                <NavLink
+                    className="nav-item nav-link"
+                    activeClassName="active"
+                    to="/register"
+                >
                     Sign up
-                </Link>
+                </NavLink>
             </li>,
         ];
     }
