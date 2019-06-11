@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Navigation = props => (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -64,7 +64,7 @@ const Navigation = props => (
 );
 
 Navigation.propTypes = {
-    appName: PropTypes.string
+    appName: PropTypes.string,
 };
 
 Navigation.defaultProps = {

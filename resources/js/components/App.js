@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Navigation from "./Navigation";
-import LandingPage from "./LandingPage";
-import Footer from "./Footer";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Navigation from './Navigation';
+import LandingPage from './LandingPage';
+import Footer from './Footer';
 
 class App extends Component {
     render() {
@@ -21,8 +21,8 @@ class App extends Component {
     }
 }
 
-if (document.getElementById("app")) {
-    const appElement = document.getElementById("app");
-    const appName = appElement.getAttribute("data-app-name");
+if (document.getElementById('app')) {
+    const appElement = document.getElementById('app');
+    const appName = appElement.getAttribute('data-app-name');
     ReactDOM.render(<App name={appName} />, appElement);
 }

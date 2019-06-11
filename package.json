@@ -9,13 +9,23 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "test": "jest",
-        "heroku-postbuild": "npm run prod"
+        "heroku-postbuild": "npm run prod",
+        "format": "prettier --write \"{docs,resources}/**/*.{js,md,scss,graphql}\""
+    },
+    "prettier": {
+        "singleQuote": true,
+        "trailingComma": "all"
     },
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
         "@babel/preset-react": "^7.0.0",
-        "@testing-library/react": "^8.0.1",
+        "@testing-library/react": "^8.0.1"
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2",
+        "react-mailchimp-subscribe": "^2.1.0",
+        "cross-env": "^5.1",
         "axios": "^0.19",
         "babel-jest": "^24.8.0",
         "bootstrap": "^4.1.0",
@@ -24,6 +34,7 @@
         "laravel-mix": "^4.0.7",
         "lodash": "^4.17.5",
         "popper.js": "^1.12",
+        "prettier": "1.18.2",
         "react": "^16.2.0",
         "react-dom": "^16.2.0",
         "react-router": "^5.0.0",
@@ -32,10 +43,5 @@
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0"
-    },
-    "dependencies": {
-        "prop-types": "^15.7.2",
-        "react-mailchimp-subscribe": "^2.1.0",
-        "cross-env": "^5.1"
     }
 }

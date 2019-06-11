@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import TextSection from "../TextSection";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
+import React, { Component } from 'react';
+import TextSection from '../TextSection';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 class LandingPage extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class LandingPage extends Component {
                 <div>
                     <TextSection
                         title={
-                            "Dealing with death is hard. \n We’re here to make the planning a little bit easier."
+                            'Dealing with death is hard. \n We’re here to make the planning a little bit easier.'
                         }
                     />
                     {/* <a
@@ -60,12 +60,12 @@ class LandingPage extends Component {
                                             Using the information you provide,
                                             we’ll immediately create a
                                             customized checklist to guide you
-                                            through your next steps of planning.{" "}
+                                            through your next steps of planning.{' '}
                                             <span className="font-italic">
                                                 Hint: it’s also a really great
                                                 tool for answering “how can I
                                                 help?”
-                                            </span>{" "}
+                                            </span>{' '}
                                         </p>
                                     </li>
                                 </ol>
@@ -75,9 +75,9 @@ class LandingPage extends Component {
                 </div>
                 {/*  Why we are here */}
                 <TextSection
-                    title={"Why We’re Here"}
+                    title={'Why We’re Here'}
                     body={
-                        "We’ve been there. Our team started in your shoes having lost parents and grandparents, and having been totally overwhelmed by all of the work that came with it.  So we made it our mission to ensure every grieving person has a simple, trustworthy, and comprehensive place to turn. We’ve sifted through the hundreds of websites, funeral services, and books so you don’t have to and we’ve got some of the most knowledgeable people in the game advising us. Think of us as part knowledgeable friend who’s been there before and part assistant to help you wade through the tough stuff.  Click below to chat with us now and  we’ll set you up with a free roadmap for what’s to come."
+                        'We’ve been there. Our team started in your shoes having lost parents and grandparents, and having been totally overwhelmed by all of the work that came with it.  So we made it our mission to ensure every grieving person has a simple, trustworthy, and comprehensive place to turn. We’ve sifted through the hundreds of websites, funeral services, and books so you don’t have to and we’ve got some of the most knowledgeable people in the game advising us. Think of us as part knowledgeable friend who’s been there before and part assistant to help you wade through the tough stuff.  Click below to chat with us now and  we’ll set you up with a free roadmap for what’s to come.'
                     }
                 />
                 {/* Not ready */}
@@ -95,7 +95,7 @@ class LandingPage extends Component {
                                 <div className="mailchimp-form">
                                     <MailchimpSubscribe
                                         url={
-                                            "https://goodgrief.us19.list-manage.com/subscribe/post?u=07235aa8ad2f334b610249099&amp;id=bd3ad2cd01"
+                                            'https://goodgrief.us19.list-manage.com/subscribe/post?u=07235aa8ad2f334b610249099&amp;id=bd3ad2cd01'
                                         }
                                     />
                                 </div>
