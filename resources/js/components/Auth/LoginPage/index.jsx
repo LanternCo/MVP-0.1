@@ -1,7 +1,9 @@
-import React, { Component } from "react";
-import { Field, reduxForm } from "redux-form";
-import { signInAction } from "../../../actions";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import ReactRouterPropTypes from 'react-router-prop-types';
+import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { signInAction } from '../../../actions';
 
 class LoginPage extends Component {
     constructor(props) {
@@ -12,13 +14,19 @@ class LoginPage extends Component {
     }
 
     submit(values) {
-        this.props.signInAction(values, this.props.history);
+        const { history } = this.props;
+
+        signInAction(values, history);
     }
 
     errorMessage() {
-        if (this.props.errorMessage) {
-            return <div className="info-red">{this.props.errorMessage}</div>;
+        const { errorMessage } = this.props;
+
+        if (errorMessage) {
+            return <div className="info-red">{errorMessage}</div>;
         }
+
+        return null;
     }
 
     render() {
@@ -52,15 +60,21 @@ class LoginPage extends Component {
     }
 }
 
+LoginPage.propTypes = {
+    history: ReactRouterPropTypes.history.isRequired,
+    errorMessage: PropTypes.string.isRequired,
+    handleSubmit: PropTypes.func.isRequired,
+};
+
 function mapStateToProps(state) {
     return { errorMessage: state.auth.error };
 }
 
 const reduxFormSignin = reduxForm({
-    form: "signin"
+    form: 'signin',
 })(LoginPage);
 
 export default connect(
     mapStateToProps,
-    { signInAction }
+    { signInAction },
 )(reduxFormSignin);
