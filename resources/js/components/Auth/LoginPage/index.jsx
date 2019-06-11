@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactRouterPropTypes from 'react-router-prop-types';
@@ -8,13 +10,12 @@ import { signInAction } from '../../../actions';
 class LoginPage extends Component {
     constructor(props) {
         super(props);
-
         this.submit = this.submit.bind(this);
         this.errorMessage = this.errorMessage.bind(this);
     }
 
     submit(values) {
-        const { history } = this.props;
+        const { signInAction, history } = this.props;
 
         signInAction(values, history);
     }
@@ -62,8 +63,13 @@ class LoginPage extends Component {
 
 LoginPage.propTypes = {
     history: ReactRouterPropTypes.history.isRequired,
-    errorMessage: PropTypes.string.isRequired,
+    errorMessage: PropTypes.string,
     handleSubmit: PropTypes.func.isRequired,
+    signInAction: PropTypes.func.isRequired,
+};
+
+LoginPage.defaultProps = {
+    errorMessage: '',
 };
 
 function mapStateToProps(state) {

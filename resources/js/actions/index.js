@@ -1,10 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const AUTHENTICATED = "authenticated_user";
-
-export const UNAUTHENTICATED = "unauthenticated_user";
-
-export const AUTHENTICATION_ERROR = "authentication_error";
+export const AUTHENTICATED = 'authenticated_user';
+export const UNAUTHENTICATED = 'unauthenticated_user';
+export const AUTHENTICATION_ERROR = 'authentication_error';
 
 const URL = window.location.origin;
 
@@ -13,16 +11,16 @@ export function signInAction({ email, password }, history) {
         try {
             const res = await axios.post(`${URL}/api/login`, {
                 email,
-                password
+                password,
             });
             dispatch({ type: AUTHENTICATED });
-            localStorage.setItem("user", res.data.token);
+            localStorage.setItem('user', res.data.token);
             // @todo - change to redirect to dashboard
-            history.push("/");
+            history.push('/');
         } catch (error) {
             dispatch({
                 type: AUTHENTICATION_ERROR,
-                payload: "Invalid email or password"
+                payload: 'Invalid email or password',
             });
         }
     };
@@ -31,6 +29,6 @@ export function signInAction({ email, password }, history) {
 export function signOutAction() {
     localStorage.clear();
     return {
-        type: UNAUTHENTICATED
+        type: UNAUTHENTICATED,
     };
 }
