@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { isEmpty } from 'lodash';
 import ReactRouterPropTypes from 'react-router-prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
@@ -32,12 +33,24 @@ class LoginPage extends Component {
     }
 
     render() {
-        const { handleSubmit } = this.props;
+        const { handleSubmit, errorMessage } = this.props;
 
         return (
             <div className="container my-4">
                 <div className="row justify-content-center">
                     <div className="col-md-8">
+                        {!isEmpty(errorMessage) && (
+                            <div className="alert alert-warning alert-dismissible fade show">
+                                {errorMessage.data}
+                                <button
+                                    type="button"
+                                    className="close"
+                                    data-dismiss="alert"
+                                >
+                                    &times;
+                                </button>
+                            </div>
+                        )}
                         <div className="card">
                             <div className="card-header">Login</div>
 
@@ -121,13 +134,16 @@ class LoginPage extends Component {
 
 LoginPage.propTypes = {
     history: ReactRouterPropTypes.history.isRequired,
-    errorMessage: PropTypes.string,
+    errorMessage: PropTypes.shape({
+        data: PropTypes.string,
+        status: PropTypes.number,
+    }),
     handleSubmit: PropTypes.func.isRequired,
     signInAction: PropTypes.func.isRequired,
 };
 
 LoginPage.defaultProps = {
-    errorMessage: '',
+    errorMessage: {},
 };
 
 function mapStateToProps(state) {
