@@ -27,6 +27,28 @@ export function signInAction({ email, password }, history) {
     };
 }
 
+export function registerAction({ name, email, password }, history) {
+    return dispatch => {
+        axios
+            .post(`${URL}/api/register`, {
+                name,
+                email,
+                password,
+            })
+            .then(res => {
+                dispatch({ type: AUTHENTICATED, payload: res });
+                localStorage.setItem('user', res.data.token);
+                history.push('/');
+            })
+            .catch(error => {
+                dispatch({
+                    type: AUTHENTICATION_ERROR,
+                    payload: error.response,
+                });
+            });
+    };
+}
+
 export function signOutAction() {
     localStorage.clear();
     return {

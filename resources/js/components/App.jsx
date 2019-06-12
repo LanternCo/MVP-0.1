@@ -10,7 +10,7 @@ import Navigation from './Navigation';
 import LandingPage from './LandingPage';
 import Footer from './Footer';
 import LoginPage from './Auth/LoginPage';
-// import RegisterPage from "./Auth/RegisterPage";
+import RegisterPage from './Auth/RegisterPage';
 import SignOut from './Auth/SignOut';
 import reducers from '../reducers';
 import { AUTHENTICATED } from '../actions';
@@ -40,6 +40,7 @@ const App = props => {
                         <Route exact path="/" component={LandingPage} />
                         <Route path="/signin" component={LoginPage} />
                         <Route path="/signout" component={SignOut} />
+                        <Route path="/register" component={RegisterPage} />
                         {/* <Route path="/secret" component={SecretPage} /> */}
                     </Switch>
                     <Footer />
