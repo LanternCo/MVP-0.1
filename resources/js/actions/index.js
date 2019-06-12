@@ -3,6 +3,8 @@ import axios from 'axios';
 export const AUTHENTICATED = 'authenticated_user';
 export const UNAUTHENTICATED = 'unauthenticated_user';
 export const AUTHENTICATION_ERROR = 'authentication_error';
+export const FORGOT_PASSWORD_REQUEST = 'forgot_password_request';
+export const FORGOT_PASSWORD_ERROR = 'forgot_password_error';
 export const PASSWORD_RESET_REQUEST = 'password_reset_request';
 export const PASSWORD_RESET_ERROR = 'password_reset_error';
 
@@ -51,16 +53,38 @@ export function registerAction({ name, email, password }, history) {
     };
 }
 
-export function passwordResetAction({ email }, history) {
+export function forgotPasswordAction({ email }) {
     return dispatch => {
         axios
             .post(`${URL}/api/password/create`, {
                 email,
             })
             .then(res => {
+                dispatch({ type: FORGOT_PASSWORD_REQUEST, payload: res });
+            })
+            .catch(error => {
+                dispatch({
+                    type: FORGOT_PASSWORD_ERROR,
+                    payload: error.response,
+                });
+            });
+    };
+}
+
+export function passwordResetAction({ email, password, token }) {
+    return dispatch => {
+        axios
+            .post(`${URL}/api/password/reset`, {
+                email,
+                password,
+                token,
+            })
+            .then(res => {
+                console.log(res);
                 dispatch({ type: PASSWORD_RESET_REQUEST, payload: res });
             })
             .catch(error => {
+                console.log(error);
                 dispatch({
                     type: PASSWORD_RESET_ERROR,
                     payload: error.response,

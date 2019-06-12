@@ -3,6 +3,7 @@ import {
     AUTHENTICATED,
     UNAUTHENTICATED,
     AUTHENTICATION_ERROR,
+    FORGOT_PASSWORD_REQUEST,
     PASSWORD_RESET_REQUEST,
 } from '../actions';
 
@@ -14,8 +15,10 @@ export default function(state = {}, action) {
             return { ...state, authenticated: false };
         case AUTHENTICATION_ERROR:
             return { ...state, error: action.payload };
-        case PASSWORD_RESET_REQUEST:
+        case FORGOT_PASSWORD_REQUEST:
             return { ...state, message: action.payload.data.message };
+        case PASSWORD_RESET_REQUEST:
+            return { ...state, response: action.payload.data };
     }
 
     return state;

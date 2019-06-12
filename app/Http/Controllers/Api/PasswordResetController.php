@@ -93,7 +93,7 @@ class PasswordResetController extends Controller
     {
         $request->validate([
             'email' => 'required|string|email',
-            'password' => 'required|string|confirmed',
+            'password' => 'required|string',
             'token' => 'required|string'
         ]);
 

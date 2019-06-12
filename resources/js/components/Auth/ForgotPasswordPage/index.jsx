@@ -10,54 +10,46 @@ import PropTypes from 'prop-types';
 import ReactRouterPropTypes from 'react-router-prop-types';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { passwordResetAction } from '../../../actions';
+import { forgotPasswordAction } from '../../../actions';
 
-class PasswordResetPage extends Component {
+class ForgotPasswordPage extends Component {
     constructor(props) {
         super(props);
 
         this.submit = this.submit.bind(this);
-        // this.renderMessage = this.renderMessage.bind(this);
+        this.renderMessage = this.renderMessage.bind(this);
     }
 
     submit(values) {
-        const { passwordResetAction, history } = this.props;
+        const { forgotPasswordAction, history } = this.props;
 
-        passwordResetAction(values, history);
+        forgotPasswordAction(values, history);
     }
 
     renderMessage() {
-        const { response } = this.props;
-        console.log(response);
-        if (response.message) {
-            return (
-                <div className="alert alert-warning">{response.message}</div>
-            );
-        }
+        const { message } = this.props;
 
-        if (response.id) {
-            return (
-                <div className="alert alert-warning">
-                    You password was successfully changed
-                </div>
-            );
+        if (message) {
+            return <div className="alert alert-warning">{message}</div>;
         }
 
         return null;
     }
 
     render() {
-        const { handleSubmit, response } = this.props;
+        const { handleSubmit, message } = this.props;
 
         return (
             <div className="container my-4">
                 <div className="row justify-content-center">
                     <div className="col-md-8">
                         <div className="card">
-                            <div className="card-header">Reset Password</div>
+                            <div className="card-header">
+                                Forgot your password? No worries!
+                            </div>
 
                             <div className="card-body">
-                                {response !== '' && this.renderMessage()}
+                                {message !== '' && this.renderMessage()}
 
                                 <form onSubmit={handleSubmit(this.submit)}>
                                     <div className="form-group row">
@@ -77,26 +69,6 @@ class PasswordResetPage extends Component {
                                                 className="form-control"
                                                 required
                                                 autoComplete="email"
-                                                value="something@something.com"
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="form-group row">
-                                        <label
-                                            className="col-md-4 col-form-label text-md-right"
-                                            htmlFor="password"
-                                        >
-                                            New Password
-                                        </label>
-                                        <div className="col-md-6">
-                                            <Field
-                                                id="password"
-                                                name="password"
-                                                component="input"
-                                                type="password"
-                                                placeholder="Password"
-                                                className="form-control"
                                             />
                                         </div>
                                     </div>
@@ -121,42 +93,26 @@ class PasswordResetPage extends Component {
     }
 }
 
-PasswordResetPage.propTypes = {
+ForgotPasswordPage.propTypes = {
     history: ReactRouterPropTypes.history.isRequired,
-    response: PropTypes.shape({
-        created_at: PropTypes.string,
-        email: PropTypes.string,
-        email_verified_at: PropTypes.string,
-        id: PropTypes.number,
-        name: PropTypes.string,
-        updated_at: PropTypes.string,
-    }),
+    message: PropTypes.string,
     handleSubmit: PropTypes.func.isRequired,
-    passwordResetAction: PropTypes.func.isRequired,
+    forgotPasswordAction: PropTypes.func.isRequired,
 };
 
-PasswordResetPage.defaultProps = {
-    response: {},
+ForgotPasswordPage.defaultProps = {
+    message: '',
 };
 
 function mapStateToProps(state) {
-    const urlParams = new URLSearchParams(window.location.search);
-
-    return {
-        response: state.auth.response,
-        initialValues: {
-            email: urlParams.has('email') && urlParams.get('email'),
-            token: urlParams.has('reset_token') && urlParams.get('reset_token'),
-        },
-    };
+    return { message: state.auth.message };
 }
 
 const reduxFormRegister = reduxForm({
-    form: 'passwordReset',
-    enableReinitialize: true,
-})(PasswordResetPage);
+    form: 'forgotPassword',
+})(ForgotPasswordPage);
 
 export default connect(
     mapStateToProps,
-    { passwordResetAction },
+    { forgotPasswordAction },
 )(reduxFormRegister);

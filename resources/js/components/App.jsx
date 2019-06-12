@@ -11,6 +11,7 @@ import LandingPage from './LandingPage';
 import Footer from './Footer';
 import LoginPage from './Auth/LoginPage';
 import RegisterPage from './Auth/RegisterPage';
+import ForgotPasswordPage from './Auth/ForgotPasswordPage';
 import PasswordResetPage from './Auth/PasswordResetPage';
 import SignOut from './Auth/SignOut';
 import reducers from '../reducers';
@@ -44,7 +45,12 @@ const App = props => {
                         <Route path="/register" component={RegisterPage} />
                         <Route
                             exact
-                            path="/password_resets"
+                            path="/forgotpassword"
+                            component={ForgotPasswordPage}
+                        />
+                        <Route
+                            exact
+                            path="/passwordreset"
                             component={PasswordResetPage}
                         />
                         {/* <Route path="/secret" component={SecretPage} /> */}
