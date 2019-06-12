@@ -115,11 +115,12 @@ class LoginPage extends Component {
                                                 Sign In
                                             </button>
 
-                                            {/* @if (Route::has('password.request'))
-                                            <a className="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
+                                            <a
+                                                className="btn btn-link"
+                                                href="/forgotpassword"
+                                            >
+                                                Forgot Your Password?
                                             </a>
-                                            @endif */}
                                         </div>
                                     </div>
                                 </form>
