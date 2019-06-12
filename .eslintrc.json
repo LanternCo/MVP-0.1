@@ -1,16 +1,26 @@
 {
     "extends": ["airbnb", "prettier", "prettier/react"],
-    "plugins": ["prettier", "jest"],
+    "plugins": ["prettier", "jest", "jsx-a11y"],
     "rules": {
         "prettier/prettier": ["error"],
         "jest/no-disabled-tests": "warn",
         "jest/no-focused-tests": "error",
         "jest/no-identical-title": "error",
         "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error"
+        "jest/valid-expect": "error",
+        "jsx-a11y/label-has-for": [
+            "error",
+            {
+                "components": ["label"],
+                "required": {
+                    "every": ["id"]
+                }
+            }
+        ]
     },
     "parser": "babel-eslint",
     "env": {
-        "jest": true
+        "jest": true,
+        "browser": true
     }
 }
