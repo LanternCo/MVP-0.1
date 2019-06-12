@@ -11,6 +11,7 @@ import LandingPage from './LandingPage';
 import Footer from './Footer';
 import LoginPage from './Auth/LoginPage';
 import RegisterPage from './Auth/RegisterPage';
+import PasswordResetPage from './Auth/PasswordResetPage';
 import SignOut from './Auth/SignOut';
 import reducers from '../reducers';
 import { AUTHENTICATED } from '../actions';
@@ -41,6 +42,11 @@ const App = props => {
                         <Route path="/signin" component={LoginPage} />
                         <Route path="/signout" component={SignOut} />
                         <Route path="/register" component={RegisterPage} />
+                        <Route
+                            exact
+                            path="/password_resets"
+                            component={PasswordResetPage}
+                        />
                         {/* <Route path="/secret" component={SecretPage} /> */}
                     </Switch>
                     <Footer />

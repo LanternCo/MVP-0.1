@@ -10,8 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::view('/{path?}', 'layout.master', ['app_name' => env('APP_NAME') ]);
+Route::view('/{path?}', 'layout.master', ['app_name' => env('APP_NAME')]);
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Auth::routes();

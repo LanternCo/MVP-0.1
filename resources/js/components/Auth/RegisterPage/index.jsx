@@ -18,7 +18,6 @@ class RegisterPage extends Component {
     }
 
     submit(values) {
-        console.log(values);
         const { registerAction, history } = this.props;
 
         registerAction(values, history);
@@ -168,7 +167,7 @@ function mapStateToProps(state) {
 }
 
 const reduxFormRegister = reduxForm({
-    form: 'signin',
+    form: 'register',
 })(RegisterPage);
 
 export default connect(
