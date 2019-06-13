@@ -47,6 +47,8 @@ class ArticleCrudController extends CrudController
     public function store(StoreRequest $request)
     {
         // your additional operations before save here
+        $request->request->add(['user_id' => backpack_user()->id]);
+
         $redirect_location = parent::storeCrud($request);
         // your additional operations after save here
         // use $this->data['entry'] or $this->crud->entry
