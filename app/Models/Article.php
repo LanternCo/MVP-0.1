@@ -32,14 +32,7 @@ class Article extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-    // public static function boot()
-    // {
-    //     parent::boot();
 
-    //     static::creating(function ($article) {
-    //         $article->user_id = auth()->user()->id;
-    //     });
-    // }
     /*
     |--------------------------------------------------------------------------
     | RELATIONS

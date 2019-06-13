@@ -37,7 +37,11 @@ class ArticleCrudController extends CrudController
         // $this->crud->setFromDb();
         $this->crud->setColumns(['user_id', 'title', 'body']);
         $this->crud->addField('title');
-        $this->crud->addField('body');
+        $this->crud->addField([
+            'name' => 'body',
+            'label' => 'Body',
+            'type' => 'wysiwyg'
+        ]);
 
         // add asterisk for fields that are required in ArticleRequest
         $this->crud->setRequiredFields(StoreRequest::class, 'create');
