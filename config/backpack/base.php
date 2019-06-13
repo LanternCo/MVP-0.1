@@ -15,7 +15,7 @@ return [
     'project_name' => 'Backpack',
 
     // Menu logos
-    'logo_lg'   => '<b>Back</b>pack',
+    'logo_lg'   => '<b>Lantern</b> backpack',
     'logo_mini' => '<b>B</b>p',
 
     // Developer or company name. Shown in footer.
