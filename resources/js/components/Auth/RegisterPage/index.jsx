@@ -35,12 +35,12 @@ class RegisterPage extends Component {
 
     render() {
         const { handleSubmit, errorMessage } = this.props;
-        console.log(errorMessage);
+
         return (
             <div className="container my-4">
                 <div className="row justify-content-center">
                     <div className="col-md-8">
-                        {!isEmpty(errorMessage) &&
+                        {/* {!isEmpty(errorMessage) &&
                             errorMessage.data.errors.length !== 0 && (
                                 <div className="alert alert-warning alert-dismissible fade show">
                                     <p>We had a problem!</p>
@@ -57,7 +57,7 @@ class RegisterPage extends Component {
                                         &times;
                                     </button>
                                 </div>
-                            )}
+                            )} */}
                         <div className="card">
                             <div className="card-header">Register</div>
 

@@ -34,7 +34,7 @@
                         </a>
                     </div>
                 </div> --}}
-        <div id="app" data-app-name={{$app_name}}></div>
+        <div id="app" data-app-name="Lantern"></div>
         <script src="{{ secure_asset('js/app.js') }}"></script>
     </body>
 </html>
