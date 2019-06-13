@@ -19,10 +19,10 @@ return [
     'logo_mini' => '<b>B</b>p',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Cristian Tabacitu',
+    'developer_name' => 'Lantern',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://tabacitu.ro',
+    'developer_link' => '',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => true,
@@ -92,9 +92,10 @@ return [
     // The classes for the middleware to check if the visitor is an admin
     // Can be a single class or an array of clases
     'middleware_class' => [
-        App\Http\Middleware\CheckIfAdmin::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        // \Backpack\Base\app\Http\Middleware\UseBackpackAuthGuardInsteadOfDefaultAuthGuard::class,
+        \Backpack\Base\app\Http\Middleware\UseBackpackAuthGuardInsteadOfDefaultAuthGuard::class,
+        App\Http\Middleware\CheckIfAdmin::class,
+        // \App\Http\Middleware\AdminMiddleware::class
     ],
 
     // Alias for that middleware

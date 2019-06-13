@@ -19,6 +19,7 @@ export function signInAction({ email, password }, history) {
             })
             .then(res => {
                 dispatch({ type: AUTHENTICATED, payload: res });
+                console.log(res.data);
                 localStorage.setItem('user', res.data.token);
                 history.push('/');
             })

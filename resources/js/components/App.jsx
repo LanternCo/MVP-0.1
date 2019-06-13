@@ -27,6 +27,7 @@ const store = createStoreWithMiddleware(
 const user = localStorage.getItem('user');
 
 if (user) {
+    console.log(user);
     store.dispatch({ type: AUTHENTICATED });
 }
 
