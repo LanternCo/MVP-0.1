@@ -10,21 +10,22 @@ class Navigation extends Component {
 
         if (authenticated) {
             return [
-                <li key="secret" className="nav-item">
-                    <NavLink
-                        className="nav-item nav-link"
-                        activeClassName="active"
-                        to="/secret"
-                    >
-                        Secret
-                    </NavLink>
-                </li>,
                 <li key="signout" className="nav-item">
                     <SignOut />
                 </li>,
             ];
         }
+
         return [
+            <li key="articles" className="nav-item">
+                <NavLink
+                    className="nav-item nav-link"
+                    activeClassName="active"
+                    to="/articles"
+                >
+                    Articles
+                </NavLink>
+            </li>,
             <li key="signin" className="nav-item">
                 <NavLink
                     className="nav-item nav-link"
