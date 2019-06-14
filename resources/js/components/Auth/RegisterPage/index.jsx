@@ -35,7 +35,7 @@ class RegisterPage extends Component {
 
     render() {
         const { handleSubmit, errorMessage } = this.props;
-        console.log(errorMessage);
+
         return (
             <div className="container my-4">
                 <div className="row justify-content-center">

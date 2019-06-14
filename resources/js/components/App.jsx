@@ -16,6 +16,7 @@ import PasswordResetPage from './Auth/PasswordResetPage';
 import SignOut from './Auth/SignOut';
 import reducers from '../reducers';
 import { AUTHENTICATED } from '../actions';
+import ArticlesPage from './ArticlesPage';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(
@@ -53,7 +54,7 @@ const App = props => {
                             path="/passwordreset"
                             component={PasswordResetPage}
                         />
-                        {/* <Route path="/secret" component={SecretPage} /> */}
+                        <Route path="/articles" component={ArticlesPage} />
                     </Switch>
                     <Footer />
                 </div>

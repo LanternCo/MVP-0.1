@@ -24,7 +24,13 @@ class SignOut extends Component {
                 activeClassName="active"
                 to="#"
             >
-                <div className="nav-signout" onClick={this.handleSignOut}>
+                <div
+                    className="nav-signout"
+                    onClick={this.handleSignOut}
+                    onKeyPress={this.handleSignOut}
+                    tabIndex="0"
+                    role="button"
+                >
                     Sign Out
                 </div>
             </NavLink>
