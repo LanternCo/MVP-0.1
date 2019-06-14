@@ -7,6 +7,7 @@ export const FORGOT_PASSWORD_REQUEST = 'forgot_password_request';
 export const FORGOT_PASSWORD_ERROR = 'forgot_password_error';
 export const PASSWORD_RESET_REQUEST = 'password_reset_request';
 export const PASSWORD_RESET_ERROR = 'password_reset_error';
+export const SET_ARTICLE_DETAILS = 'set_article_details';
 
 const URL = window.location.origin;
 
@@ -98,5 +99,21 @@ export function signOutAction() {
     localStorage.clear();
     return {
         type: UNAUTHENTICATED,
+    };
+}
+
+function setArticleDetails(data) {
+    return {
+        type: SET_ARTICLE_DETAILS,
+        payload: data,
+    };
+}
+
+export function fetchArticleDetails() {
+    return dispatch => {
+        // console.log('fetchArticlesDetails', dispatch);
+        return axios.get(`${URL}/api/articles`).then(({ data }) => {
+            dispatch(setArticleDetails(data));
+        });
     };
 }

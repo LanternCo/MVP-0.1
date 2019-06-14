@@ -16,6 +16,7 @@ import PasswordResetPage from './Auth/PasswordResetPage';
 import SignOut from './Auth/SignOut';
 import reducers from '../reducers';
 import { AUTHENTICATED } from '../actions';
+import ArticlesPage from './ArticlesPage';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(
@@ -27,7 +28,6 @@ const store = createStoreWithMiddleware(
 const user = localStorage.getItem('user');
 
 if (user) {
-    console.log(user);
     store.dispatch({ type: AUTHENTICATED });
 }
 
@@ -54,7 +54,7 @@ const App = props => {
                             path="/passwordreset"
                             component={PasswordResetPage}
                         />
-                        {/* <Route path="/secret" component={SecretPage} /> */}
+                        <Route path="/articles" component={ArticlesPage} />
                     </Switch>
                     <Footer />
                 </div>

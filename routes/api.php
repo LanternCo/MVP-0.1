@@ -25,6 +25,7 @@ Route::group(['middleware' => ['json.response']], function () {
     Route::post('/password/create', 'Api\PasswordResetController@create');
     Route::get('/password/find/{token}', 'Api\PasswordResetController@find');
     Route::post('/password/reset', 'Api\PasswordResetController@reset');
+    Route::get('/articles', 'Api\ArticlesController@index')->name('articles.index');
 
     // private routes
     Route::middleware('auth:api')->group(function () {
