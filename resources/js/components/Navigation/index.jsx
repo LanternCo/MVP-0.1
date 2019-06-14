@@ -17,15 +17,6 @@ class Navigation extends Component {
         }
 
         return [
-            <li key="articles" className="nav-item">
-                <NavLink
-                    className="nav-item nav-link"
-                    activeClassName="active"
-                    to="/articles"
-                >
-                    Articles
-                </NavLink>
-            </li>,
             <li key="signin" className="nav-item">
                 <NavLink
                     className="nav-item nav-link"
@@ -80,6 +71,15 @@ class Navigation extends Component {
                             className="navbar-nav ml-auto"
                             id="navbarSupportedContent"
                         >
+                            <li key="articles" className="nav-item">
+                                <NavLink
+                                    className="nav-item nav-link"
+                                    activeClassName="active"
+                                    to="/articles"
+                                >
+                                    Articles
+                                </NavLink>
+                            </li>
                             {this.navbarLinks()}
                         </ul>
                     </div>

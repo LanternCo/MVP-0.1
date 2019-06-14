@@ -94,18 +94,6 @@ class LoginPage extends Component {
                                         </div>
                                     </div>
 
-                                    {/* <div className="form-group row">
-                                    <div className="col-md-6 offset-md-4">
-                                    <div className="form-check">
-                                    <input className="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label className="form-check-label" for="remember">
-                                    {{ __('Remember Me') }}
-                                    </label>
-                                    </div>
-                                    </div>
-                                    </div> */}
-
                                     <div className="form-group row mb-0">
                                         <div className="col-md-8 offset-md-4">
                                             <button

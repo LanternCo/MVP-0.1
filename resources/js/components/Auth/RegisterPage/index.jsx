@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-array-index-key */
+/* eslint-disable react/no-array-index-key */
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
